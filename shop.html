@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header id="header">
+        <div class="nav container" id="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!-- Content -->
+                <div class="cart-content">
+                    
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+
+                <!-- Buy Button -->
+                <button type="button" class="btn-buy">Buy Now</button>
+
+                <!-- Cart close -->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop container" style="margin-top: 2px;">
+        <h2 style="text-align: center; margin-bottom: 15px;">Vegetables</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/vegetables/broccoli.jpg" alt="" class="product-img">
+                <h2 class="product-title">Brocolli</h2>
+                <span class="price">$25</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/vegetables/cabbage.jpg" alt="" class="product-img">
+                <h2 class="product-title">cabbage</h2>
+                <span class="price">$100</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/vegetables/capsicum.jpg" alt="" class="product-img">
+                <h2 class="product-title">capsicum</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/vegetables/carrot.jpg" alt="" class="product-img">
+                <h2 class="product-title">carrot</h2>
+                <span class="price">$24.04</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/vegetables/cauliflower.jpg" alt="" class="product-img">
+                <h2 class="product-title">cauliflower</h2>
+                <span class="price">$50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/vegetables/cucumber.jpg" alt="" class="product-img">
+                <h2 class="product-title">cucumber</h2>
+                <span class="price">$50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/vegetables/long-bean.jpg" alt="" class="product-img">
+                <h2 class="product-title">long-bean</h2>
+                <span class="price">$70</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/vegetables/mushroom.jpg" alt="" class="product-img">
+                <h2 class="product-title">mushroom</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/vegetables/peas.jpg" alt="" class="product-img">
+                <h2 class="product-title">peas</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/vegetables/onion.jpg" alt="" class="product-img">
+                <h2 class="product-title">onion</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/vegetables/radish.jpg" alt="" class="product-img">
+                <h2 class="product-title">radish</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/vegetables/red-radish.jpg" alt="" class="product-img">
+                <h2 class="product-title">red-radish</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop container" style="margin-top: 5px;">
+        <h2 style="text-align: center; margin-bottom: 15px;">Fruits</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/fruits/apple.jpg" alt="" class="product-img">
+                <h2 class="product-title">apple</h2>
+                <span class="price">$25</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/fruits/blueberry.jpg" alt="" class="product-img">
+                <h2 class="product-title">blueberry</h2>
+                <span class="price">$100</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/fruits/cherry.jpg" alt="" class="product-img">
+                <h2 class="product-title">cherry</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/fruits/grape-black.jpg" alt="" class="product-img">
+                <h2 class="product-title">Black Grape</h2>
+                <span class="price">$24.04</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/fruits/grape.jpg" alt="" class="product-img">
+                <h2 class="product-title">green grape</h2>
+                <span class="price">$50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/fruits/kiwi.jpg" alt="" class="product-img">
+                <h2 class="product-title">kiwi</h2>
+                <span class="price">$50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/fruits/local-orange.jpg" alt="" class="product-img">
+                <h2 class="product-title">orange</h2>
+                <span class="price">$70</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/fruits/mango.jpg" alt="" class="product-img">
+                <h2 class="product-title">mango</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/fruits/peach.jpg" alt="" class="product-img">
+                <h2 class="product-title">peach</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/fruits/pinapple.jpg" alt="" class="product-img">
+                <h2 class="product-title">pineapple</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/fruits/pomegranate.jpg" alt="" class="product-img">
+                <h2 class="product-title">pomegrade</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/fruits/pulm.jpg" alt="" class="product-img">
+                <h2 class="product-title">plum</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/fruits/watermelon.jpg" alt="" class="product-img">
+                <h2 class="product-title">watermelon</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="img/fruits/strawberry.jpg" alt="" class="product-img">
+                <h2 class="product-title">strawberry</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop container" style="margin-top: 5px;">
+        <h2 style="text-align: center; margin-bottom: 15px;">Meat & Fish</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/meat/beef.jpg" alt="" class="product-img">
+                <h2 class="product-title">Beef</h2>
+                <span class="price">$25</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/meat/buffalo.jpg" alt="" class="product-img">
+                <h2 class="product-title">buffalo</h2>
+                <span class="price">$100</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/meat/camel.jpg" alt="" class="product-img">
+                <h2 class="product-title">camel</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/meat/chicken.jpg" alt="" class="product-img">
+                <h2 class="product-title">chicken</h2>
+                <span class="price">$24.04</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/meat/mutton.jpg" alt="" class="product-img">
+                <h2 class="product-title">mutton</h2>
+                <span class="price">$50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/meat/shrimp.jpg" alt="" class="product-img">
+                <h2 class="product-title">shrimp</h2>
+                <span class="price">$50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/meat/sprat.jpg" alt="" class="product-img">
+                <h2 class="product-title">sprat</h2>
+                <span class="price">$70</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/meat/trout.jpg" alt="" class="product-img">
+                <h2 class="product-title">trout</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop container" style="margin-top: 5px;">
+        <h2 style="text-align: center; margin-bottom: 15px;">Spices</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/spices/cardamom.jpg" alt="" class="product-img">
+                <h2 class="product-title">cardamon</h2>
+                <span class="price">$25</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/spices/clove.jpg" alt="" class="product-img">
+                <h2 class="product-title">clove</h2>
+                <span class="price">$100</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/spices/mix-spice.jpg" alt="" class="product-img">
+                <h2 class="product-title">mixed spice</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop container" style="margin-top: 5px;">
+        <h2 style="text-align: center; margin-bottom: 15px;">Nuts</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/nuts/almond.jpg" alt="" class="product-img">
+                <h2 class="product-title">almond</h2>
+                <span class="price">$25</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/nuts/cashew-nut.jpg" alt="" class="product-img">
+                <h2 class="product-title">cashew nut</h2>
+                <span class="price">$100</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/nuts/dates.jpg" alt="" class="product-img">
+                <h2 class="product-title">dates</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/nuts/raisins.jpg" alt="" class="product-img">
+                <h2 class="product-title">raisins</h2>
+                <span class="price">$45</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+    
+    <script src="src/script.js"></script>
+</body>
+</html>
