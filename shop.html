@@ -13,7 +13,16 @@
         <a href="#"><img src="img/logo" class="logo" alt=""></a>
         <div class="nav containers" id="navbar">
             <li><a href="home.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
+            <li class="dropdown">
+                <span><a href="shop.html">Shop</a></span>
+                <ul class="dropdown-content">
+                    <li><a href="#">Vegetables</a></li>
+                    <li><a href="#fruits">Fruits</a></li>
+                    <li><a href="#">Meat & Fish</a></li>
+                    <li><a href="#spices">Spices</a></li>
+                    <li><a href="#nuts">Nuts</a></li>
+                </ul>
+            </li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -44,80 +53,88 @@
             <div class="product-box">
                 <img src="img/vegetables/broccoli.jpg" alt="" class="product-img">
                 <h2 class="product-title">Brocolli</h2>
-                <span class="price">$25</span>
+                <span class="price">$3.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
+                <div class="star-rating">
+                    <span class="star" data-value="1"></span>
+                    <span class="star" data-value="2"></span>
+                    <span class="star" data-value="3"></span>
+                    <span class="star" data-value="4"></span>
+                    <span class="star" data-value="5"></span>
+                </div>
+                <button id="save-rating">Save Rating</button>                      
             </div>
 
             <div class="product-box">
                 <img src="img/vegetables/cabbage.jpg" alt="" class="product-img">
                 <h2 class="product-title">cabbage</h2>
-                <span class="price">$100</span>
+                <span class="price">$2.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/vegetables/capsicum.jpg" alt="" class="product-img">
                 <h2 class="product-title">capsicum</h2>
-                <span class="price">$45</span>
+                <span class="price">$0.55 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/vegetables/carrot.jpg" alt="" class="product-img">
                 <h2 class="product-title">carrot</h2>
-                <span class="price">$24.04</span>
+                <span class="price">$1.01 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/vegetables/cauliflower.jpg" alt="" class="product-img">
                 <h2 class="product-title">cauliflower</h2>
-                <span class="price">$50</span>
+                <span class="price">$4.59 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/vegetables/cucumber.jpg" alt="" class="product-img">
                 <h2 class="product-title">cucumber</h2>
-                <span class="price">$50</span>
+                <span class="price">$0.87 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/vegetables/long-bean.jpg" alt="" class="product-img">
                 <h2 class="product-title">long-bean</h2>
-                <span class="price">$70</span>
+                <span class="price">$1.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/vegetables/mushroom.jpg" alt="" class="product-img">
                 <h2 class="product-title">mushroom</h2>
-                <span class="price">$45</span>
+                <span class="price">$3.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/vegetables/peas.jpg" alt="" class="product-img">
                 <h2 class="product-title">peas</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/vegetables/onion.jpg" alt="" class="product-img">
                 <h2 class="product-title">onion</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.89 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/vegetables/radish.jpg" alt="" class="product-img">
                 <h2 class="product-title">radish</h2>
-                <span class="price">$45</span>
+                <span class="price">$4.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/vegetables/red-radish.jpg" alt="" class="product-img">
                 <h2 class="product-title">red-radish</h2>
-                <span class="price">$45</span>
+                <span class="price">$5.00 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
@@ -129,92 +146,92 @@
             <div class="product-box">
                 <img src="img/fruits/apple.jpg" alt="" class="product-img">
                 <h2 class="product-title">apple</h2>
-                <span class="price">$25</span>
+                <span class="price">$1.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/fruits/blueberry.jpg" alt="" class="product-img">
                 <h2 class="product-title">blueberry</h2>
-                <span class="price">$100</span>
+                <span class="price">$0.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/fruits/cherry.jpg" alt="" class="product-img">
                 <h2 class="product-title">cherry</h2>
-                <span class="price">$45</span>
+                <span class="price">$0.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/fruits/grape-black.jpg" alt="" class="product-img">
                 <h2 class="product-title">Black Grape</h2>
-                <span class="price">$24.04</span>
+                <span class="price">$1.20 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/fruits/grape.jpg" alt="" class="product-img">
                 <h2 class="product-title">green grape</h2>
-                <span class="price">$50</span>
+                <span class="price">$1.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/fruits/kiwi.jpg" alt="" class="product-img">
                 <h2 class="product-title">kiwi</h2>
-                <span class="price">$50</span>
+                <span class="price">$1.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/fruits/local-orange.jpg" alt="" class="product-img">
                 <h2 class="product-title">orange</h2>
-                <span class="price">$70</span>
+                <span class="price">$0.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/fruits/mango.jpg" alt="" class="product-img">
                 <h2 class="product-title">mango</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/fruits/peach.jpg" alt="" class="product-img">
                 <h2 class="product-title">peach</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.69 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/fruits/pinapple.jpg" alt="" class="product-img">
                 <h2 class="product-title">pineapple</h2>
-                <span class="price">$45</span>
+                <span class="price">$3.00 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/fruits/pomegranate.jpg" alt="" class="product-img">
                 <h2 class="product-title">pomegrade</h2>
-                <span class="price">$45</span>
+                <span class="price">$2.00 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/fruits/pulm.jpg" alt="" class="product-img">
                 <h2 class="product-title">plum</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.30 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/fruits/watermelon.jpg" alt="" class="product-img">
                 <h2 class="product-title">watermelon</h2>
-                <span class="price">$45</span>
+                <span class="price">$2.09 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
             <div class="product-box">
                 <img src="img/fruits/strawberry.jpg" alt="" class="product-img">
                 <h2 class="product-title">strawberry</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.59 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
@@ -226,56 +243,56 @@
             <div class="product-box">
                 <img src="img/meat/beef.jpg" alt="" class="product-img">
                 <h2 class="product-title">Beef</h2>
-                <span class="price">$25</span>
+                <span class="price">$5.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/meat/buffalo.jpg" alt="" class="product-img">
                 <h2 class="product-title">buffalo</h2>
-                <span class="price">$100</span>
+                <span class="price">$8.50 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/meat/camel.jpg" alt="" class="product-img">
                 <h2 class="product-title">camel</h2>
-                <span class="price">$45</span>
+                <span class="price">$10.59 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/meat/chicken.jpg" alt="" class="product-img">
                 <h2 class="product-title">chicken</h2>
-                <span class="price">$24.04</span>
+                <span class="price">$5.55 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/meat/mutton.jpg" alt="" class="product-img">
                 <h2 class="product-title">mutton</h2>
-                <span class="price">$50</span>
+                <span class="price">$7.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/meat/shrimp.jpg" alt="" class="product-img">
                 <h2 class="product-title">shrimp</h2>
-                <span class="price">$50</span>
+                <span class="price">$12.00 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/meat/sprat.jpg" alt="" class="product-img">
                 <h2 class="product-title">sprat</h2>
-                <span class="price">$70</span>
+                <span class="price">$13.10 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/meat/trout.jpg" alt="" class="product-img">
                 <h2 class="product-title">trout</h2>
-                <span class="price">$45</span>
+                <span class="price">$3.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
@@ -287,21 +304,21 @@
             <div class="product-box">
                 <img src="img/spices/cardamom.jpg" alt="" class="product-img">
                 <h2 class="product-title">cardamon</h2>
-                <span class="price">$25</span>
+                <span class="price">$1.25 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/spices/clove.jpg" alt="" class="product-img">
                 <h2 class="product-title">clove</h2>
-                <span class="price">$100</span>
+                <span class="price">$1.39 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/spices/mix-spice.jpg" alt="" class="product-img">
                 <h2 class="product-title">mixed spice</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.10 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
@@ -313,28 +330,28 @@
             <div class="product-box">
                 <img src="img/nuts/almond.jpg" alt="" class="product-img">
                 <h2 class="product-title">almond</h2>
-                <span class="price">$25</span>
+                <span class="price">$3.99 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/nuts/cashew-nut.jpg" alt="" class="product-img">
                 <h2 class="product-title">cashew nut</h2>
-                <span class="price">$100</span>
+                <span class="price">$4.59 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/nuts/dates.jpg" alt="" class="product-img">
                 <h2 class="product-title">dates</h2>
-                <span class="price">$45</span>
+                <span class="price">$3.595 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
 
             <div class="product-box">
                 <img src="img/nuts/raisins.jpg" alt="" class="product-img">
                 <h2 class="product-title">raisins</h2>
-                <span class="price">$45</span>
+                <span class="price">$1.59 Per Kg</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>

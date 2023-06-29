@@ -93,8 +93,6 @@ img{
 section {
     padding: 4rem 0 3rem;
 }
-
-
   
 marquee {
     display: -webkit-box;
@@ -420,6 +418,35 @@ marquee.about-marquee {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+.dropdown-content {
+    display: none;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.star-rating {
+    display: block;
+  }
+  
+  .star-rating .star {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+  }
+  
+  .star-rating .star:before {
+    content: "\2605";
+    display: inline-block;
+  }
+  
+  .star-rating .star.selected {
+    color: gold;
+  }
+  
+  
 
 /* Breakpoints / Makin Responsive */
 @media (max-width: 1080px) {

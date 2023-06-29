@@ -129,3 +129,53 @@ function updatetotal(){
 
     document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
+
+
+// Dropdown
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownItems = document.querySelectorAll('.dropdown');
+  
+    dropdownItems.forEach(function(item) {
+      item.addEventListener('mouseover', function() {
+        this.querySelector('.dropdown-content').style.display = 'block';
+      });
+  
+      item.addEventListener('mouseout', function() {
+        this.querySelector('.dropdown-content').style.display = 'none';
+      });
+    });
+});
+
+
+// Ratings
+const stars = document.querySelectorAll('.star-rating .star');
+const saveButton = document.getElementById('save-rating');
+let selectedRating = 0;
+
+function handleStarClick() {
+  const value = parseInt(this.dataset.value);
+
+  selectedRating = value;
+
+  stars.forEach((star) => {
+    if (star.dataset.value <= value) {
+      star.classList.add('selected');
+    } else {
+      star.classList.remove('selected');
+    }
+  });
+}
+
+function handleSaveRating() {
+  // Here, you can perform additional actions to save the selected rating,
+  // such as sending it to a server-side script or storing it in local storage.
+
+  console.log('Rating saved:', selectedRating);
+}
+
+stars.forEach((star) => {
+  star.addEventListener('click', handleStarClick);
+});
+
+saveButton.addEventListener('click', handleSaveRating);
+
