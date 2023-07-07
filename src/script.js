@@ -129,6 +129,7 @@ function updatetotal(){
 
     document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
+<<<<<<< HEAD
 
 
 // =================================
@@ -294,3 +295,5 @@ paymentMethodSelect.addEventListener('change', function() {
     mpesaContainer.style.display = 'none';
   }
 });
+=======
+>>>>>>> d2d30ededafebbffc8c6a359499839c29c774a19
