@@ -238,3 +238,59 @@ heroSlideRightBtn.onclick = () => {
 // ===============================
 //    Hero Slider Animation End
 // ===============================
+
+// Assuming you have an "Add to Cart" button with the id "add-to-cart-button"
+
+// Redirect to the checkout page
+document.getElementById("add-to-cart-button").addEventListener("click", function() {
+    window.location.href = "./checkout.html";
+  });
+  
+  // Redirect to the location page
+  document.getElementById("add-to-cart-button").addEventListener("click", function() {
+    window.location.href = "./location.html";
+  });
+
+
+// Add any JavaScript functionality for the checkout form here
+window.addEventListener('DOMContentLoaded', (event) => {
+    // Accessing form elements
+    const form = document.querySelector('form');
+    const firstNameInput = document.getElementById('firstName');
+    const lastNameInput = document.getElementById('lastName');
+    const emailInput = document.getElementById('email');
+    const createAccountCheckbox = document.getElementById('createAccount');
+  
+// Handling form submission
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+  
+// Perform form validation and submission logic here
+  
+// Example: Displaying form data in the console
+      console.log('Form submitted');
+      console.log('First Name:', firstNameInput.value);
+      console.log('Last Name:', lastNameInput.value);
+      console.log('Email:', emailInput.value);
+      console.log('Create Account:', createAccountCheckbox.checked);
+    });
+  });
+
+
+// Show/hide payment-specific fields based on the selected payment method
+const paymentMethodSelect = document.getElementById('payment-method');
+const paypalContainer = document.getElementById('paypal-container');
+const mpesaContainer = document.getElementById('mpesa-container');
+
+paymentMethodSelect.addEventListener('change', function() {
+  if (paymentMethodSelect.value === 'paypal') {
+    paypalContainer.style.display = 'block';
+    mpesaContainer.style.display = 'none';
+  } else if (paymentMethodSelect.value === 'mpesa') {
+    paypalContainer.style.display = 'none';
+    mpesaContainer.style.display = 'block';
+  } else {
+    paypalContainer.style.display = 'none';
+    mpesaContainer.style.display = 'none';
+  }
+});
