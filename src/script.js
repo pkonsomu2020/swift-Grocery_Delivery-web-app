@@ -49,7 +49,7 @@ function ready(){
 // Buy Button
 function buyButtonClicked(){
     alert('Your order is placed')
-    prompt('Enter your location')
+    // prompt('Enter your location')
     var cartContent = document.getElementsByClassName("cart-content")[0];
     while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
@@ -120,14 +120,15 @@ function updatetotal(){
         var cartBox = cartBoxes[i]
         var priceElement = cartBox.getElementsByClassName('cart-price')[0]
         var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0]
-        var price = parseFloat(priceElement.innerText.replace("$", ""));
+        var price = parseFloat(priceElement.innerText.replace("Ksh", ""));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
     }
     // If price contains some cents Value
-    total = Math.round(total * 100) / 100;
+    // total = Math.round(total * 100) / 100;
+    total = Math.round(total * 1000);
 
-    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+    document.getElementsByClassName("total-price")[0].innerText = "Ksh." + total;
 }
 
 
@@ -145,6 +146,22 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 });
+
+// mpesa pay
+function pay(){
+
+  var url = "https://tinypesa.com/api/v1/express/initialize";
+
+  fetch(url, {
+      body: "amount=1&msisdn=0726229587&account_no=200",
+      headers: {
+          Apikey: "Me3s8tLM8vW",
+          "Content-Type": "application/x-www-form-urlencoded",
+      },
+      method: "POST",
+  });
+
+}
 
 
 // Ratings
