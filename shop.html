@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="src/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -18,17 +18,12 @@
                 <ul class="dropdown-content">
                     <li class="nav-item"><a class="nav-link" href="#vegetables">Vegetables</a></li>
                     <li class="nav-item"><a class="nav-link" href="#fruits">Fruits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Meat & Fish</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#meat">Meat & Fish</a></li>
                     <li class="nav-item"><a class="nav-link" href="#spices">Spices</a></li>
                     <li class="nav-item"><a class="nav-link" href="#nuts">Nuts</a></li>
                 </ul>
             </li>
-            <!-- <li><a href="blog.html">Blog</a></li> -->
-            <!-- <li><a href="about.html">About</a></li> -->
             <li><a href="contact.html">Contact</a></li>
-            <!-- <li><a href="location.html">location</a></li> -->
-            <!-- <li><a href="checkout.html">checkout</a></li> -->
-            <!-- <li><a href="confirmation.html">confirmation</a></li> -->
             <i class='bx bx-shopping-bag' id="cart-icon"></i>
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
@@ -42,378 +37,423 @@
                 </div>
 
                 <!-- Buy Button -->
-                <button type="button" class="btn-buy" onclick="pay()">Buy Now</button>
-                <!-- <button class="btn btn-danger" id="checkout">Checkout</button>
-                <button class="btn btn-danger deliver">Delivery</button> -->
-
-                <!-- <div class="delivery">
-                    <form action="">
-                      <div class="form-group">
-                        <input type="text" id="name" class="form-control mb-3" placeholder="Name">
-                        <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
-                        <input type="text" id="location" class="form-control mb-3" placeholder="Location">
-                        <button class="btn btn-danger" id="final-order">Place Order</button>
-                      </div>
-                    </form>
-                </div> -->
+                <button type="button" class="btn-buy" onclick="pay()" id="buy-now">Buy Now</button>
 
                 <!-- Cart close -->
                 <i class='bx bx-x' id="close-cart"></i>
-                <!-- <a href="./checkout.html">Proceed to Checkout</a> -->
-                <a href="./location.html">Proceed to Location</a>
             </div>
         </div>
     </header>
 
-    <section class="shop container">
-        <h2 style="text-align: center; margin-bottom: 15px;">Vegetables</h2>
-        <div class="shop-content">
-            <div class="product-box">
-                <img src="img/vegetables/broccoli.jpg" alt="" class="product-img">
-                <h2 class="product-title">Brocolli</h2>
-                <span class="price">Ksh.220 Per Kg</span>
-                <!-- <span class="price">$3.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-                <div class="star-rating">
-                    <span class="star" data-value="1"></span>
-                    <span class="star" data-value="2"></span>
-                    <span class="star" data-value="3"></span>
-                    <span class="star" data-value="4"></span>
-                    <span class="star" data-value="5"></span>
+    <div id="vegetables">
+        <section class="shop container">
+            <h2 style="text-align: center; margin-bottom: 15px;">Vegetables</h2>
+            <div class="shop-content">
+                <div class="product-box">
+                    <img src="img/vegetables/broccoli.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Brocolli</h2>
+                    <span class="price">Ksh.220 Per Kg</span>
+                    <!-- <span class="price">$3.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                    <!-- <div class="star-rating">
+                        <span class="star" data-value="1"></span>
+                        <span class="star" data-value="2"></span>
+                        <span class="star" data-value="3"></span>
+                        <span class="star" data-value="4"></span>
+                        <span class="star" data-value="5"></span>
+                    </div>
+                    <button id="save-rating">Save Rating</button>                       -->
                 </div>
-                <button id="save-rating">Save Rating</button>                      
+    
+                <div class="product-box">
+                    <img src="img/vegetables/cabbage.jpg" alt="" class="product-img">
+                    <h2 class="product-title">cabbage</h2>
+                    <span class="price">Ksh.120 Per Kg</span>
+                    <!-- <span class="price">$2.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/vegetables/capsicum.jpg" alt="" class="product-img">
+                    <h2 class="product-title">capsicum</h2>
+                    <span class="price">Ksh.100 Per Kg</span>
+                    <!-- <span class="price">$0.55 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/vegetables/carrot.jpg" alt="" class="product-img">
+                    <h2 class="product-title">carrot</h2>
+                    <span class="price">Ksh.80 Per Kg</span>
+                    <!-- <span class="price">$1.01 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/vegetables/cauliflower.jpg" alt="" class="product-img">
+                    <h2 class="product-title">cauliflower</h2>
+                    <span class="price">Ksh.250 Per Kg</span>
+                    <!-- <span class="price">$4.59 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/vegetables/cucumber.jpg" alt="" class="product-img">
+                    <h2 class="product-title">cucumber</h2>
+                    <span class="price">Ksh.110 Per Kg</span>
+                    <!-- <span class="price">$0.87 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/vegetables/long-bean.jpg" alt="" class="product-img">
+                    <h2 class="product-title">long-bean</h2>
+                    <span class="price">Ksh.150 Per Kg</span>
+                    <!-- <span class="price">$1.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/vegetables/mushroom.jpg" alt="" class="product-img">
+                    <h2 class="product-title">mushroom</h2>
+                    <span class="price">Ksh.180 Per Kg</span>
+                    <!-- <span class="price">$3.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/vegetables/peas.jpg" alt="" class="product-img">
+                    <h2 class="product-title">peas</h2>
+                    <span class="price">Ksh.140 Per Kg</span>
+                    <!-- <span class="price">$1.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/vegetables/onion.jpg" alt="" class="product-img">
+                    <h2 class="product-title">onion</h2>
+                    <span class="price">Ksh.120 Per Kg</span>
+                    <!-- <span class="price">$1.89 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/vegetables/radish.jpg" alt="" class="product-img">
+                    <h2 class="product-title">radish</h2>
+                    <span class="price">Ksh.250 Per Kg</span>
+                    <!-- <span class="price">$4.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/vegetables/red-radish.jpg" alt="" class="product-img">
+                    <h2 class="product-title">red-radish</h2>
+                    <span class="price">Ksh.300 Per Kg</span>
+                    <!-- <span class="price">$5.00 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <div class="product-box">
-                <img src="img/vegetables/cabbage.jpg" alt="" class="product-img">
-                <h2 class="product-title">cabbage</h2>
-                <span class="price">Ksh.120 Per Kg</span>
-                <!-- <span class="price">$2.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
+    <div id="fruits">
+        <section class="shop container">
+            <h2 style="text-align: center;">Fruits</h2>
+            <div class="shop-content">
+                <div class="product-box">
+                    <img src="img/fruits/apple.jpg" alt="" class="product-img">
+                    <h2 class="product-title">apple</h2>
+                    <span class="price">Ksh.180 Per Kg</span>
+                    <!-- <span class="price">$1.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/fruits/blueberry.jpg" alt="" class="product-img">
+                    <h2 class="product-title">blueberry</h2>
+                    <span class="price">Ksh.120 Per Kg</span>
+                    <!-- <span class="price">$0.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/fruits/cherry.jpg" alt="" class="product-img">
+                    <h2 class="product-title">cherry</h2>
+                    <span class="price">Ksh.140 Per Kg</span>
+                    <!-- <span class="price">$0.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/fruits/grape-black.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Black Grape</h2>
+                    <span class="price">Ksh.200 Per Kg</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/fruits/grape.jpg" alt="" class="product-img">
+                    <h2 class="product-title">green grape</h2>
+                    <span class="price">Ksh.300 Per Kg</span>
+                    <!-- <span class="price">$1.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/fruits/kiwi.jpg" alt="" class="product-img">
+                    <h2 class="product-title">kiwi</h2>
+                    <span class="price">Ksh.250 Per Kg</span>
+                    <!-- <span class="price">$1.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/fruits/local-orange.jpg" alt="" class="product-img">
+                    <h2 class="product-title">orange</h2>
+                    <span class="price">Ksh.200 Per Kg</span>
+                    <!-- <span class="price">$0.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/fruits/mango.jpg" alt="" class="product-img">
+                    <h2 class="product-title">mango</h2>
+                    <span class="price">Ksh.280 Per Kg</span>
+                    <!-- <span class="price">$1.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/fruits/peach.jpg" alt="" class="product-img">
+                    <h2 class="product-title">peach</h2>
+                    <span class="price">Ksh.350 Per Kg</span>
+                    <!-- <span class="price">$1.69 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/fruits/pinapple.jpg" alt="" class="product-img">
+                    <h2 class="product-title">pineapple</h2>
+                    <span class="price">Ksh.280 Per Kg</span>
+                    <!-- <span class="price">$3.00 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/fruits/pomegranate.jpg" alt="" class="product-img">
+                    <h2 class="product-title">pomegrade</h2>
+                    <span class="price">Ksh.120 Per Kg</span>
+                    <!-- <span class="price">$2.00 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/fruits/pulm.jpg" alt="" class="product-img">
+                    <h2 class="product-title">plum</h2>
+                    <span class="price">Ksh.195 Per Kg</span>
+                    <!-- <span class="price">$1.30 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/fruits/watermelon.jpg" alt="" class="product-img">
+                    <h2 class="product-title">watermelon</h2>
+                    <span class="price">Ksh.220 Per Kg</span>
+                    <!-- <span class="price">$2.09 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="img/fruits/strawberry.jpg" alt="" class="product-img">
+                    <h2 class="product-title">strawberry</h2>
+                    <span class="price">Ksh.150 Per Kg</span>
+                    <!-- <span class="price">$1.59 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <div class="product-box">
-                <img src="img/vegetables/capsicum.jpg" alt="" class="product-img">
-                <h2 class="product-title">capsicum</h2>
-                <span class="price">Ksh.100 Per Kg</span>
-                <!-- <span class="price">$0.55 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
+    <div id="meat">
+        <section class="shop container">
+            <h2 style="text-align: center; margin-bottom: 15px;">Meat & Fish</h2>
+            <div class="shop-content">
+                <div class="product-box">
+                    <img src="img/meat/beef.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Beef</h2>
+                    <span class="price">Ksh.600 Per Kg</span>
+                    <!-- <span class="price">$5.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/meat/buffalo.jpg" alt="" class="product-img">
+                    <h2 class="product-title">buffalo</h2>
+                    <span class="price">Ksh.950 Per Kg</span>
+                    <!-- <span class="price">$8.50 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/meat/camel.jpg" alt="" class="product-img">
+                    <h2 class="product-title">camel</h2>
+                    <span class="price">Ksh.990.80 Per Kg</span>
+                    <!-- <span class="price">$10.59 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/meat/chicken.jpg" alt="" class="product-img">
+                    <h2 class="product-title">chicken</h2>
+                    <span class="price">Ksh.600 Per Kg</span>
+                    <!-- <span class="price">$5.55 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/meat/mutton.jpg" alt="" class="product-img">
+                    <h2 class="product-title">mutton</h2>
+                    <span class="price">Ksh.700 Per Kg</span>
+                    <!-- <span class="price">$7.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/meat/shrimp.jpg" alt="" class="product-img">
+                    <h2 class="product-title">shrimp</h2>
+                    <span class="price">Ksh.888 Per Kg</span>
+                    <!-- <span class="price">$12.00 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/meat/sprat.jpg" alt="" class="product-img">
+                    <h2 class="product-title">sprat</h2>
+                    <span class="price">Ksh.750 Per Kg</span>
+                    <!-- <span class="price">$13.10 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/meat/trout.jpg" alt="" class="product-img">
+                    <h2 class="product-title">trout</h2>
+                    <span class="price">Ksh.999 Per Kg</span>
+                    <!-- <span class="price">$3.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <div class="product-box">
-                <img src="img/vegetables/carrot.jpg" alt="" class="product-img">
-                <h2 class="product-title">carrot</h2>
-                <span class="price">Ksh.80 Per Kg</span>
-                <!-- <span class="price">$1.01 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
+    <div id="spices">
+        <section class="shop container">
+            <h2 style="text-align: center; margin-bottom: 15px;">Spices</h2>
+            <div class="shop-content">
+                <div class="product-box">
+                    <img src="img/spices/cardamom.jpg" alt="" class="product-img">
+                    <h2 class="product-title">cardamon</h2>
+                    <span class="price">Ksh.100 Per Kg</span>
+                    <!-- <span class="price">$1.25 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/spices/clove.jpg" alt="" class="product-img">
+                    <h2 class="product-title">clove</h2>
+                    <span class="price">Ksh.110 Per Kg</span>
+                    <!-- <span class="price">$1.39 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/spices/mix-spice.jpg" alt="" class="product-img">
+                    <h2 class="product-title">mixed spice</h2>
+                    <span class="price">Ksh.125 Per Kg</span>
+                    <!-- <span class="price">$1.10 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <div class="product-box">
-                <img src="img/vegetables/cauliflower.jpg" alt="" class="product-img">
-                <h2 class="product-title">cauliflower</h2>
-                <span class="price">Ksh.250 Per Kg</span>
-                <!-- <span class="price">$4.59 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
+    <div id="nuts">
+        <section class="shop container">
+            <h2 style="text-align: center; margin-bottom: 15px;">Nuts</h2>
+            <div class="shop-content">
+                <div class="product-box">
+                    <img src="img/nuts/almond.jpg" alt="" class="product-img">
+                    <h2 class="product-title">almond</h2>
+                    <span class="price">Ksh.455 Per Kg</span>
+                    <!-- <span class="price">$3.99 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/nuts/cashew-nut.jpg" alt="" class="product-img">
+                    <h2 class="product-title">cashew nut</h2>
+                    <span class="price">Ksh.900 Per Kg</span>
+                    <!-- <span class="price">$4.59 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/nuts/dates.jpg" alt="" class="product-img">
+                    <h2 class="product-title">dates</h2>
+                    <span class="price">Ksh.120 Per Kg</span>
+                    <!-- <span class="price">$3.595 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+    
+                <div class="product-box">
+                    <img src="img/nuts/raisins.jpg" alt="" class="product-img">
+                    <h2 class="product-title">raisins</h2>
+                    <span class="price">Ksh.399 Per Kg</span>
+                    <!-- <span class="price">$1.59 Per Kg</span> -->
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
             </div>
+        </section>
+    </div>
 
-            <div class="product-box">
-                <img src="img/vegetables/cucumber.jpg" alt="" class="product-img">
-                <h2 class="product-title">cucumber</h2>
-                <span class="price">Ksh.110 Per Kg</span>
-                <!-- <span class="price">$0.87 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/vegetables/long-bean.jpg" alt="" class="product-img">
-                <h2 class="product-title">long-bean</h2>
-                <span class="price">Ksh.150 Per Kg</span>
-                <!-- <span class="price">$1.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/vegetables/mushroom.jpg" alt="" class="product-img">
-                <h2 class="product-title">mushroom</h2>
-                <span class="price">Ksh.180 Per Kg</span>
-                <!-- <span class="price">$3.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/vegetables/peas.jpg" alt="" class="product-img">
-                <h2 class="product-title">peas</h2>
-                <span class="price">Ksh.140 Per Kg</span>
-                <!-- <span class="price">$1.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/vegetables/onion.jpg" alt="" class="product-img">
-                <h2 class="product-title">onion</h2>
-                <span class="price">Ksh.120 Per Kg</span>
-                <!-- <span class="price">$1.89 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/vegetables/radish.jpg" alt="" class="product-img">
-                <h2 class="product-title">radish</h2>
-                <span class="price">Ksh.250 Per Kg</span>
-                <!-- <span class="price">$4.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/vegetables/red-radish.jpg" alt="" class="product-img">
-                <h2 class="product-title">red-radish</h2>
-                <span class="price">Ksh.300 Per Kg</span>
-                <!-- <span class="price">$5.00 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
+    <div id="delivery-section" class="hidden">
+        <h2>Delivery Details</h2>
+        <form id="delivery-form">
+          <label for="location">Location:</label>
+          <input type="text" id="location" required>
+      
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" required>
+      
+          <button type="submit" id="track-progress">Track Progress</button>
+        </form>
+      
+        <div id="progress-section" class="hidden">
+          <h3>Delivery Progress</h3>
+          <p id="progress-message"></p>
         </div>
-    </section>
+    </div>
 
-    <section class="shop container">
-        <h2 style="text-align: center;">Fruits</h2>
-        <div class="shop-content">
-            <div class="product-box">
-                <img src="img/fruits/apple.jpg" alt="" class="product-img">
-                <h2 class="product-title">apple</h2>
-                <span class="price">Ksh.180 Per Kg</span>
-                <!-- <span class="price">$1.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
+    <!-- <div class="contacts" style="align-content: center;">
+        <h2>CONTACT US</h2>
+        <form action="https://formspree.io/f/xdobdonk" method="post" style="align-content: center;" >
+      
+          <div class="row">
+            <div class="col-md-4">
+            <div class="form-group">
+              <input id="name" type="text" name="name" placeholder="Name..."  required!>
             </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <input id="email" type="email" name="EMAIL" placeholder="Email..."  required!>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <textarea id="text" type="text" placeholder="Your message here..." cols="100" rows="10" name="Message"></textarea>
+              </div>
+            </div>
+            <button id="btn" type="submit" class="btn btn-primary btn-submit">Submit</button>
+          </div>
+        </form>
+     </div>
+    </div> -->
 
-            <div class="product-box">
-                <img src="img/fruits/blueberry.jpg" alt="" class="product-img">
-                <h2 class="product-title">blueberry</h2>
-                <span class="price">Ksh.120 Per Kg</span>
-                <!-- <span class="price">$0.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/fruits/cherry.jpg" alt="" class="product-img">
-                <h2 class="product-title">cherry</h2>
-                <span class="price">Ksh.140 Per Kg</span>
-                <!-- <span class="price">$0.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/fruits/grape-black.jpg" alt="" class="product-img">
-                <h2 class="product-title">Black Grape</h2>
-                <span class="price">Ksh.200 Per Kg</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/fruits/grape.jpg" alt="" class="product-img">
-                <h2 class="product-title">green grape</h2>
-                <span class="price">Ksh.300 Per Kg</span>
-                <!-- <span class="price">$1.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/fruits/kiwi.jpg" alt="" class="product-img">
-                <h2 class="product-title">kiwi</h2>
-                <span class="price">Ksh.250 Per Kg</span>
-                <!-- <span class="price">$1.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/fruits/local-orange.jpg" alt="" class="product-img">
-                <h2 class="product-title">orange</h2>
-                <span class="price">Ksh.200 Per Kg</span>
-                <!-- <span class="price">$0.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/fruits/mango.jpg" alt="" class="product-img">
-                <h2 class="product-title">mango</h2>
-                <span class="price">Ksh.280 Per Kg</span>
-                <!-- <span class="price">$1.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/fruits/peach.jpg" alt="" class="product-img">
-                <h2 class="product-title">peach</h2>
-                <span class="price">Ksh.350 Per Kg</span>
-                <!-- <span class="price">$1.69 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/fruits/pinapple.jpg" alt="" class="product-img">
-                <h2 class="product-title">pineapple</h2>
-                <span class="price">Ksh.280 Per Kg</span>
-                <!-- <span class="price">$3.00 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/fruits/pomegranate.jpg" alt="" class="product-img">
-                <h2 class="product-title">pomegrade</h2>
-                <span class="price">Ksh.120 Per Kg</span>
-                <!-- <span class="price">$2.00 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/fruits/pulm.jpg" alt="" class="product-img">
-                <h2 class="product-title">plum</h2>
-                <span class="price">Ksh.195 Per Kg</span>
-                <!-- <span class="price">$1.30 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/fruits/watermelon.jpg" alt="" class="product-img">
-                <h2 class="product-title">watermelon</h2>
-                <span class="price">Ksh.220 Per Kg</span>
-                <!-- <span class="price">$2.09 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/fruits/strawberry.jpg" alt="" class="product-img">
-                <h2 class="product-title">strawberry</h2>
-                <span class="price">Ksh.150 Per Kg</span>
-                <!-- <span class="price">$1.59 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-        </div>
-    </section>
-
-    <section class="shop container">
-        <h2 style="text-align: center; margin-bottom: 15px;">Meat & Fish</h2>
-        <div class="shop-content">
-            <div class="product-box">
-                <img src="img/meat/beef.jpg" alt="" class="product-img">
-                <h2 class="product-title">Beef</h2>
-                <span class="price">Ksh.600 Per Kg</span>
-                <!-- <span class="price">$5.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/meat/buffalo.jpg" alt="" class="product-img">
-                <h2 class="product-title">buffalo</h2>
-                <span class="price">Ksh.950 Per Kg</span>
-                <!-- <span class="price">$8.50 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/meat/camel.jpg" alt="" class="product-img">
-                <h2 class="product-title">camel</h2>
-                <span class="price">Ksh.990.80 Per Kg</span>
-                <!-- <span class="price">$10.59 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/meat/chicken.jpg" alt="" class="product-img">
-                <h2 class="product-title">chicken</h2>
-                <span class="price">Ksh.600 Per Kg</span>
-                <!-- <span class="price">$5.55 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/meat/mutton.jpg" alt="" class="product-img">
-                <h2 class="product-title">mutton</h2>
-                <span class="price">Ksh.700 Per Kg</span>
-                <!-- <span class="price">$7.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/meat/shrimp.jpg" alt="" class="product-img">
-                <h2 class="product-title">shrimp</h2>
-                <span class="price">Ksh.888 Per Kg</span>
-                <!-- <span class="price">$12.00 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/meat/sprat.jpg" alt="" class="product-img">
-                <h2 class="product-title">sprat</h2>
-                <span class="price">Ksh.750 Per Kg</span>
-                <!-- <span class="price">$13.10 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/meat/trout.jpg" alt="" class="product-img">
-                <h2 class="product-title">trout</h2>
-                <span class="price">Ksh.999 Per Kg</span>
-                <!-- <span class="price">$3.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-        </div>
-    </section>
-
-    <section class="shop container">
-        <h2 style="text-align: center; margin-bottom: 15px;">Spices</h2>
-        <div class="shop-content">
-            <div class="product-box">
-                <img src="img/spices/cardamom.jpg" alt="" class="product-img">
-                <h2 class="product-title">cardamon</h2>
-                <span class="price">Ksh.100 Per Kg</span>
-                <!-- <span class="price">$1.25 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/spices/clove.jpg" alt="" class="product-img">
-                <h2 class="product-title">clove</h2>
-                <span class="price">Ksh.110 Per Kg</span>
-                <!-- <span class="price">$1.39 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/spices/mix-spice.jpg" alt="" class="product-img">
-                <h2 class="product-title">mixed spice</h2>
-                <span class="price">Ksh.125 Per Kg</span>
-                <!-- <span class="price">$1.10 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-        </div>
-    </section>
-
-    <section class="shop container">
-        <h2 style="text-align: center; margin-bottom: 15px;">Nuts</h2>
-        <div class="shop-content">
-            <div class="product-box">
-                <img src="img/nuts/almond.jpg" alt="" class="product-img">
-                <h2 class="product-title">almond</h2>
-                <span class="price">Ksh.455 Per Kg</span>
-                <!-- <span class="price">$3.99 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/nuts/cashew-nut.jpg" alt="" class="product-img">
-                <h2 class="product-title">cashew nut</h2>
-                <span class="price">Ksh.900 Per Kg</span>
-                <!-- <span class="price">$4.59 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/nuts/dates.jpg" alt="" class="product-img">
-                <h2 class="product-title">dates</h2>
-                <span class="price">Ksh.120 Per Kg</span>
-                <!-- <span class="price">$3.595 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-
-            <div class="product-box">
-                <img src="img/nuts/raisins.jpg" alt="" class="product-img">
-                <h2 class="product-title">raisins</h2>
-                <span class="price">Ksh.399 Per Kg</span>
-                <!-- <span class="price">$1.59 Per Kg</span> -->
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-        </div>
-    </section>
+    <footer style="margin-top: 20px;">
+        <p>&copy; 2023 SWIFT GROCERY DELIVERY. All rights reserved.</p>
+    </footer>
     
     <script src="src/script.js"></script>
     <script src="src/delivery.js"></script>

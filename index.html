@@ -1,65 +1,136 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login/Register</title>
-        <link rel="stylesheet" href="login.css">
-        <link rel="icon" href="./Images/Restaurants/download.png" type="image/icon type">
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./Images/Restaurants/download.png" type="image/icon type">
+</head>
 <body>
-    
-  <div class="container">
-      <div class="loginbg">
-          <div class="box signin">
-              <h2>Already Have an Account ?</h2>
-              <button class="signinbtn">Sign in</button>
-          </div>
-          <div class="box signup">
-            <h2>Dont Have an Account ?</h2>
+<div class="container">
+    <div class="loginbg">
+        <div class="box signin">
+            <h2>Already Have an Account ?</h2>
+            <button class="signinbtn">Sign in</button>
+        </div>
+        <div class="box signup">
+            <h2>Don't Have an Account ?</h2>
             <button class="signupbtn">Sign up</button>
-          </div>
-      </div>
-      <div class="formbx">
+        </div>
+    </div>
+    <div class="formbx">
         <div class="form signinform">
             <form>
                 <h2>Grocery</h2>
                 <h3>Sign In</h3>
-                <input type="text" placeholder="Name">
-                <input type="password" placeholder="Password">
-                <a href="home.html">
-                <input type="button" value="Login">
-                </a>
+                <input type="text" id="loginName" placeholder="Name" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <input type="button" value="Login" onclick="login()">
                 <a href="#" class="forgot">Forgot password?</a>
             </form>
         </div>
         <div class="form signupform">
             <form>
                 <h3>Sign up</h3>
-                <input type="text" placeholder="Enter Your Name">
-                <input type="text" placeholder="Email">
-                <!-- <input type="date" placeholder=" Enter your Date of birth"> -->
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm password">
-                <input type="submit" value="Sign Up">
+                <input type="text" id="signupName" placeholder="Enter Your Name" required>
+                <input type="text" id="signupEmail" placeholder="Email" required>
+                <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm password" required>
+                <input type="button" value="Sign Up" onclick="signup()">
             </form>
         </div>
-      </div>
-      </div>
+    </div>
+    <div class="user-section hidden">
+        <div class="avatar"></div>
+        <h2 class="username"></h2>
+        <p class="email"></p>
+        <p class="phone"></p>
+    </div>
+</div>
 <script>
     const signinbtn = document.querySelector('.signinbtn');
     const signupbtn = document.querySelector('.signupbtn');
-    const formbx = document.querySelector('.formbx'); 
-    const body = document.querySelector('body')
+    const formbx = document.querySelector('.formbx');
+    const userSection = document.querySelector('.user-section');
+    const username = document.querySelector('.username');
+    const email = document.querySelector('.email');
+    const phone = document.querySelector('.phone');
+    const body = document.querySelector('body');
+
+    // Check if the user is already logged in
+    document.addEventListener('DOMContentLoaded', function() {
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (loggedInUser) {
+            const user = JSON.parse(loggedInUser);
+            showUserDetails(user);
+        }
+    });
 
     signupbtn.onclick = function(){
-        formbx.classList.add('active')
-        body.classList.add('active')
-    }
+        formbx.classList.add('active');
+        body.classList.add('active');
+        userSection.classList.add('hidden');
+    };
     signinbtn.onclick = function(){
-        formbx.classList.remove('active')
-        body.classList.remove('active')
+        formbx.classList.remove('active');
+        body.classList.remove('active');
+        userSection.classList.add('hidden');
+    };
+
+    // Function to show user details
+    function showUserDetails(user) {
+        username.textContent = user.name;
+        email.textContent = user.email;
+        phone.textContent = user.phone;
+        userSection.classList.remove('hidden');
     }
-    </script>
-      
+
+    // Function to handle login
+    function login() {
+        const loginName = document.getElementById('loginName').value;
+        const loginPassword = document.getElementById('loginPassword').value;
+        // Validate login credentials (e.g., using an API or predefined credentials)
+        // For simplicity, using a predefined username and password
+        if (loginName === 'John' && loginPassword === 'password') {
+            const user = {
+                name: loginName,
+                email: 'john@example.com',
+                phone: '1234567890',
+                avatarUrl: 'path_to_avatar.jpg' // Replace with actual avatar URL
+            };
+            // Store user details in local storage
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
+            showUserDetails(user);
+        } else {
+            alert('Invalid username or password');
+        }
+    }
+
+    // Function to handle signup
+    function signup() {
+        const signupName = document.getElementById('signupName').value;
+        const signupEmail = document.getElementById('signupEmail').value;
+        const signupPhone = document.getElementById('signupPhone').value;
+        const signupPassword = document.getElementById('signupPassword').value;
+        const signupConfirmPassword = document.getElementById('signupConfirmPassword').value;
+
+        // Validate signup credentials (e.g., check for unique email, password strength, etc.)
+
+        const user = {
+            name: signupName,
+            email: signupEmail,
+            phone: signupPhone,
+            avatarUrl: 'path_to_avatar.jpg' // Replace with actual avatar URL
+        };
+
+        // Store user details in local storage
+        localStorage.setItem('loggedInUser', JSON.stringify(user));
+        showUserDetails(user);
+        // Redirect to home page
+        window.location.href = 'home.html';
+    }
+</script>
 </body>
 </html>
+

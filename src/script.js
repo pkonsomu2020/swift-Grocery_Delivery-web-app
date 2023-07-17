@@ -3,6 +3,49 @@ let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
 
+// Get DOM elements
+const buyNowButton = document.getElementById('buy-now');
+const deliverySection = document.getElementById('delivery-section');
+const deliveryForm = document.getElementById('delivery-form');
+const progressSection = document.getElementById('progress-section');
+const progressMessage = document.getElementById('progress-message');
+
+// Add event listener to Buy Now button
+buyNowButton.addEventListener('click', function() {
+  deliverySection.classList.remove('hidden');
+});
+
+// Add event listener to Delivery Form
+deliveryForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Get user input
+  const location = document.getElementById('location').value;
+  const phone = document.getElementById('phone').value;
+
+  // Simulate delivery progress
+  simulateDeliveryProgress(location, phone);
+});
+
+// Simulate delivery progress
+function simulateDeliveryProgress(location, phone) {
+  progressSection.classList.remove('hidden');
+
+  // Simulate progress update every 2 seconds
+  let progress = 0;
+  const interval = setInterval(function() {
+    progress += 20;
+    progressMessage.textContent = `Product is ${progress}% on the way to ${location}.`;
+
+    // If progress reaches 100%, delivery is complete
+    if (progress >= 100) {
+      clearInterval(interval);
+      progressMessage.textContent = 'Product has been delivered.';
+    }
+  }, 2000);
+}
+
+
 // Open Cart
 cartIcon.onclick = () => {
     cart.classList.add("active");
@@ -48,14 +91,36 @@ function ready(){
 
 // Buy Button
 function buyButtonClicked(){
-    alert('Your order is placed')
+    // alert('Your order is placed')
     // prompt('Enter your location')
     var cartContent = document.getElementsByClassName("cart-content")[0];
+    var deliverySection = document.getElementById("delivery-section");
+    deliverySection.classList.remove("hidden");
     while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
     }
     updatetotal();
 }
+
+function simulateDeliveryProgress(location, phone) {
+  var progressSection = document.getElementById("progress-section");
+  progressSection.classList.remove("hidden");
+  var progressMessage = document.getElementById("progress-message");
+
+  // Simulate progress update every 2 seconds
+  var progress = 0;
+  var interval = setInterval(function() {
+    progress += 20;
+    progressMessage.textContent = `Product is ${progress}% on the way to ${location}.`;
+
+    // If progress reaches 100%, delivery is complete
+    if (progress >= 100) {
+      clearInterval(interval);
+      progressMessage.textContent = "Product has been delivered.";
+    }
+  }, 2000);
+}
+
 
 // Remove items from cart
 function removeCartItem(event) {
@@ -161,6 +226,44 @@ function pay(){
       method: "POST",
   });
 
+  let location = null;
+  let phoneNumber = null;
+
+  while (!location || !phoneNumber) {
+    location = prompt("Enter your location:");
+    phoneNumber = prompt("Enter your phone number:");
+    
+    if (!location || !phoneNumber) {
+      alert("Location and phone number are required. Please try again.");
+    }
+  }
+
+
+  alert("A STK push has been sent to your phone");
+  alert("Order has been made");
+
+  fetch(`/api/delivery-progress/?location=${location}&phone_number=${phone_number}`)
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle errors
+    console.error(error);
+  })
+
+  updateDeliveryProgress(location, phoneNumber);
+
+}
+
+// const location = 'Your Location';
+// const phone_number = 'Your Phone Number';
+function updateDeliveryProgress(location, phoneNumber) {
+  // Simulate delivery progress update
+  console.log("Delivery progress:");
+  console.log("Location:", location);
+  console.log("Phone Number:", phoneNumber);
 }
 
 
@@ -199,39 +302,38 @@ saveButton.addEventListener('click', handleSaveRating);
 // Assuming you have an "Add to Cart" button with the id "add-to-cart-button"
 
 // Redirect to the checkout page
-document.getElementById("add-to-cart-button").addEventListener("click", function() {
-    window.location.href = "./checkout.html";
-  });
+// document.getElementById("add-to-cart-button").addEventListener("click", function() {
+//     window.location.href = "./checkout.html";
+//   });
   
   // Redirect to the location page
-  document.getElementById("add-to-cart-button").addEventListener("click", function() {
-    window.location.href = "./location.html";
-  });
+  // document.getElementById("add-to-cart-button").addEventListener("click", function() {
+  //   window.location.href = "./location.html";
+  // });
 
 
 // Add any JavaScript functionality for the checkout form here
-window.addEventListener('DOMContentLoaded', (event) => {
-    // Accessing form elements
-    const form = document.querySelector('form');
-    const firstNameInput = document.getElementById('firstName');
-    const lastNameInput = document.getElementById('lastName');
-    const emailInput = document.getElementById('email');
-    const createAccountCheckbox = document.getElementById('createAccount');
+// window.addEventListener('DOMContentLoaded', (event) => {
+//     const form = document.querySelector('form');
+//     const firstNameInput = document.getElementById('firstName');
+//     const lastNameInput = document.getElementById('lastName');
+//     const emailInput = document.getElementById('email');
+//     const createAccountCheckbox = document.getElementById('createAccount');
   
 // Handling form submission
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
+    // form.addEventListener('submit', (event) => {
+    //   event.preventDefault();
   
 // Perform form validation and submission logic here
   
 // Example: Displaying form data in the console
-      console.log('Form submitted');
-      console.log('First Name:', firstNameInput.value);
-      console.log('Last Name:', lastNameInput.value);
-      console.log('Email:', emailInput.value);
-      console.log('Create Account:', createAccountCheckbox.checked);
-    });
-  });
+  //     console.log('Form submitted');
+  //     console.log('First Name:', firstNameInput.value);
+  //     console.log('Last Name:', lastNameInput.value);
+  //     console.log('Email:', emailInput.value);
+  //     console.log('Create Account:', createAccountCheckbox.checked);
+  //   });
+  // });
 
 
 // Show/hide payment-specific fields based on the selected payment method
