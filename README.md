@@ -1,7 +1,7 @@
 # swift-Grocery_Delivery-web-app
 ## Project Overview
 
-This project is a web application designed to facilitate the delivery of groceries to customers. It provides an online platform where users can browse through a wide range of grocery products, add them to their cart, and place orders for delivery. The app aims to provide a seamless and convenient shopping experience for customers while streamlining the order fulfillment process. You can find this project [here](https://pkonsomu2020.github.io/swift-Grocery_Delivery-web-app/home.html)
+This project is a web application designed to facilitate the delivery of groceries to customers. It provides an online platform where users can browse through a wide range of grocery products, add them to their cart, and place orders for delivery. The app aims to provide a seamless and convenient shopping experience for customers while streamlining the order fulfillment process. You can find this project [here](https://swiftgroceryapp.netlify.app/)
 
 ## Features
 
